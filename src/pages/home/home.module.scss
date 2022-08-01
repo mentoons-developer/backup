@@ -1,0 +1,425 @@
+* {
+  // font-family: "Providence";
+}
+@font-face {
+  font-family: "Providence";
+  src: url("../../assets/fonts/Providence-Sans.otf");
+}
+body {
+}
+
+.login_button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1rem;
+  z-index: 999;
+  width: fit-content;
+  link,
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  margin: 1rem;
+  padding: 0.4rem;
+  border: 0;
+  padding: 0.7rem 1rem;
+  background: rgb(77, 106, 187);
+  color: white;
+  border-radius: 0.5rem;
+  &:hover {
+    background: rgb(29, 68, 177);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+}
+.pg1,
+.pg2,
+.pg3,
+.pg4,
+.pg5,
+.pg6 {
+  position: relative;
+}
+
+.pg1_bg,
+.pg2_bg,
+.pg3_bg,
+.pg4_bg,
+.pg5_bg,
+.pg6_bg {
+  width: 100vw;
+  margin-top: -8px;
+}
+
+.logo {
+  position: absolute;
+  z-index: 1;
+  left: 33%;
+  // transform: translateX(-50%);
+  width: 29vw;
+  animation: gelatine 2s infinite;
+}
+.illustrated_stories {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 26%;
+  transform: translateX(-50%);
+  img {
+    width: 30vw;
+  }
+}
+.about {
+  position: absolute;
+  display: flex;
+  margin: 5rem;
+  margin-top: 1rem;
+  .ooo {
+    position: relative;
+  }
+  h5 {
+    position: relative;
+    margin: 5rem;
+    font-size: 1.1rem;
+    z-index: 9;
+
+    background: rgba(150, 150, 150, 0.402);
+    color: #00000099;
+    padding: 2.6rem;
+    border-radius: 20rem;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  }
+  img {
+    position: absolute;
+    right: 0%;
+    top: -10%;
+    z-index: 1;
+    width: 18rem;
+    height: 18rem;
+    object-fit: contain;
+  }
+}
+
+.meerkat {
+  position: absolute;
+  left: 0%;
+  width: 22vw;
+  bottom: 26rem;
+  z-index: 1;
+  // width: 10vw;
+  // transform: scaleX(-1);
+}
+.fifi {
+  position: absolute;
+  z-index: 7;
+  right: 0;
+  width: 27vw;
+}
+.nala {
+  position: absolute;
+  width: 13vw;
+  left: 0%;
+  bottom: 7%;
+  z-index: 1;
+  transform: scaleX(-1);
+}
+.pg2 {
+  font-family: "Providence";
+  // text-shadow: 0.1em 0.1em 0 rgb(230, 230, 230);
+}
+.meme {
+  position: absolute;
+  max-width: 40rem;
+  left: 20%;
+  bottom: 40%;
+  z-index: 3;
+  background: rgba(150, 150, 150, 0.404);
+  color: rgb(44, 41, 41);
+  padding: 1.6rem;
+  border-radius: 20rem 20rem 20rem 1rem;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  gap: 2rem;
+  // animation: enter;
+  img {
+    width: 18vw;
+    height: auto;
+  }
+  span {
+    margin: auto;
+    font-size: 1.1rem;
+  }
+  color: rgba(0, 0, 0, 0.6);
+  background: #a9a9a9a7;
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.444);
+}
+.pinkcard {
+  width: 24rem;
+  height: 20rem;
+  position: absolute;
+  top: 45%;
+  right: 16%;
+  background: url("../../assets/pinkcard.png");
+  background-size: 24rem 20rem;
+  background-repeat: no-repeat;
+
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  button {
+    width: 100%;
+    padding: 0.7rem;
+    border: 0;
+    background: rgb(0, 99, 199);
+    cursor: pointer;
+    border-radius: 0.5rem;
+    color: white;
+  }
+  input {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.394);
+    border-radius: 0.5rem;
+    border: 0;
+    padding: 0.7rem;
+    outline: none;
+    &::placeholder {
+      color: rgb(130, 2, 2);
+    }
+    &:focus {
+      outline: 1px solid blue;
+      color: blue;
+      &::placeholder {
+        transition: text-indent 0.4s ease-in-out;
+        text-indent: -100%;
+        opacity: 1;
+      }
+    }
+  }
+}
+.list {
+  // position: absolute;
+  z-index: 4;
+  // top: -10%;
+  // right: 0;
+  display: flex;
+  grid-template-columns: repeat(1, 1fr);
+  justify-content: space-between;
+  width: 32rem;
+  flex-wrap: wrap;
+  gap: 2rem;
+  img {
+    transition: all 0.2s ease-in-out;
+    width: 15rem;
+    height: 15rem;
+    object-fit: contain;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+      rgba(0, 0, 0, 0.22) 0px 10px 10px;
+    background: rgba(200, 246, 255, 0.526);
+    border-radius: 1rem;
+    padding: 1rem;
+    &:hover {
+      transform: scale(1.1);
+      transition: all 0.2s ease-in-out;
+    }
+  }
+}
+.about2 {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+  font-family: "Providence";
+  font-size: 1.1rem;
+  // place-self: start;
+  background: rgba(150, 150, 150, 0.402);
+  color: #00000099;
+  padding: 2.6rem;
+  border-radius: 2rem;
+  height: fit-content;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.tubbykuma {
+  width: 36vw;
+  position: absolute;
+  bottom: 30%;
+  right: 0%;
+  z-index: 3;
+}
+.contest {
+  width: 22rem;
+  position: absolute;
+  top: 35%;
+  left: 8%;
+}
+.contest2 {
+  bottom: 18%;
+  right: 10%;
+  width: 20rem;
+  position: absolute;
+}
+.library_text {
+  position: absolute;
+  bottom: 25%;
+  left: 13%;
+  color: white;
+  font-family: "Providence";
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.911);
+  text-shadow: 3px 2px 3px rgba(255, 255, 255, 0.2);
+}
+.dummy {
+  position: absolute;
+  left: 0;
+  z-index: 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  row-gap: 2rem;
+  margin-left: 2rem;
+  img,
+  iframe {
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    border: 0.5px solid rgb(148, 148, 148);
+    width: 16rem;
+    height: 9rem;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 1rem;
+    &:hover {
+      transform: scale(1.1);
+    }
+    transition: all 0.3s;
+    &:nth-child(1) {
+      grid-column: 2;
+      margin-left: -7rem;
+    }
+    &:nth-child(2) {
+      grid-column: 1;
+    }
+    &:nth-child(3) {
+      grid-row: 3;
+      grid-column: 2;
+      margin-left: -2rem;
+    }
+  }
+}
+.audio_stories {
+  position: absolute;
+  z-index: 1;
+  top: 15%;
+  left: 80%;
+  transform: translateX(-50%);
+  img {
+    width: 24vw;
+  }
+}
+.audio_stories,
+.illustrated_stories {
+  img {
+    animation: myAnim 4s ease 0s infinite normal forwards;
+  }
+  p {
+    margin-top: 1rem;
+    width: 30vw;
+    font-family: "providence";
+    font-weight: 800;
+    font-size: 1.4rem;
+  }
+  li {
+    margin-top: 1rem;
+    margin-left: 2rem;
+    font-size: 1.2rem;
+    list-style: decimal;
+    font-family: "providence";
+    font-weight: 400;
+  }
+}
+.audio_stories {
+  img {
+    animation-delay: 0.19s;
+  }
+}
+
+.happy_childhood {
+  position: absolute;
+  z-index: 1;
+  // top: 50%;
+  left: 25%;
+  transform: translateX(-50%);
+  width: 50vw;
+  animation: rotate 4s infinite;
+}
+
+.new {
+  width: 100vw;
+}
+@keyframes gelatine {
+  from,
+  to {
+    transform: scale(1, 1);
+  }
+  25% {
+    transform: scale(0.97, 1.01);
+  }
+  50% {
+    transform: scale(1.01, 0.9);
+  }
+  75% {
+    transform: scale(0.97, 1.01);
+  }
+}
+@keyframes myAnim {
+  0% {
+    transform: translate(0);
+  }
+
+  20% {
+    transform: translate(-2px, 2px);
+  }
+
+  40% {
+    transform: translate(-2px, -2px);
+  }
+
+  60% {
+    transform: translate(2px, 2px);
+  }
+
+  80% {
+    transform: translate(2px, -2px);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes rotate {
+  from,
+  to {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(2deg);
+  }
+}
+@keyframes enter {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(1000%);
+  }
+}
+@media (max-width: 868px) {
+  .audio_stories,
+  .illustrated_stories {
+    p,
+    li {
+      display: none;
+    }
+  }
+}

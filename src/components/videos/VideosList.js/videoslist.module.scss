@@ -1,0 +1,54 @@
+.videos {
+  margin: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  border-bottom: 1px solid rgb(192, 192, 192);
+  .video {
+    width: 100%;
+    aspect-ratio: 16/9;
+    object-fit: cover;
+    border-radius: 1.4rem;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    h6 {
+      margin-top: auto;
+    }
+  }
+}
+
+.interaction {
+  display: flex;
+  background: rgb(206, 205, 205);
+  width: fit-content;
+  justify-content: space-between;
+  align-items: center;
+  width: 3rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 2rem;
+  img {
+    width: 0.8rem;
+    height: 0.8rem;
+  }
+  span {
+    font-size: 0.8rem;
+    color: red;
+  }
+}
+.play_pause {
+  width: 1.4rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  width: 25px;
+  height: 25px;
+  background: #1e90ff;
+  transition: 0.3s ease-in-out;
+  transition: 3s ease-in-out;
+  clip-path: polygon(100% 50%, 0 0, 0 100%);
+}
