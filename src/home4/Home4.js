@@ -8,7 +8,7 @@ import stellaBella from "../assets/stella_bella.png";
 import murderMystery from "../assets/murder_mystery.png";
 import libraryTag from "../assets/library-tag.png";
 import mallTag from "../assets/mallTag.png";
-import confetti from "https://cdn.skypack.dev/canvas-confetti";
+// import confetti from "https://cdn.skypack.dev/canvas-confetti";
 
 function Home4() {
   const [animate, setAnimate] = useState(false);
@@ -46,19 +46,19 @@ function Home4() {
     setScroll((prev) => !prev);
   };
 
-  useEffect(() => {
-    setTimeout(() => {
-      confetti();
-      confetti();
-      confetti();
-    }, 3000);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     confetti();
+  //     confetti();
+  //     confetti();
+  //   }, 3000);
 
-    setTimeout(() => {
-      confetti();
-      confetti();
-      confetti();
-    }, 4000);
-  }, []);
+  //   setTimeout(() => {
+  //     confetti();
+  //     confetti();
+  //     confetti();
+  //   }, 4000);
+  // }, []);
 
   useEffect(() => {
     const targeet1 = document.querySelector("#target1");
