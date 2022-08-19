@@ -35,3 +35,9 @@
 .show {
   display: block;
 }
+@media (min-width: 480px) {
+  .tabs {
+    justify-content: space-around;
+    background: rgb(241, 241, 241);
+  }
+}

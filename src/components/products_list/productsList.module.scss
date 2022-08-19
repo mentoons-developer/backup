@@ -50,14 +50,15 @@
   justify-content: space-between;
   gap: 0.2rem;
   padding: 0.5rem;
+  p {
+    font-size: 0.8rem;
+    width: 8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
-p {
-  font-size: 0.8rem;
-  width: 8rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+
 @media (min-width: 480px) {
   .products_container {
     grid-template-columns: repeat(auto-fill, minmax(26rem, 1fr));

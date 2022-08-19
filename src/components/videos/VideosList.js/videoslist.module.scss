@@ -52,3 +52,16 @@
   transition: 3s ease-in-out;
   clip-path: polygon(100% 50%, 0 0, 0 100%);
 }
+@media (min-width: 480px) {
+  .videos_container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
+  }
+  .videos {
+    border: 0ch;
+    .video {
+      max-width: 20rem;
+    }
+  }
+}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import Styles from "./home.module.scss";
+import Styles from "./home2.module.scss";
 import { Link } from "react-router-dom";
 // import { AuthContext } from "../../context/AuthContext"
 import bg1 from "../../assets/bg1.jpg";
@@ -16,27 +16,29 @@ import dialogueBox from "../../assets/dialogue_box.png";
 import toto from "../../assets/toto.png";
 import tubbykuma from "../../assets/tubby_kuma.png";
 import nala from "../../assets/nala.png";
-import meme from "../../assets/meme_of_the_day1.png";
+// import meme from "../../assets/meme_of_the_day1.png";
+import meme from "../../assets/meme.png";
 import contest from "../../assets/contest.png";
 import contest2 from "../../assets/contest2.png";
 import signin from "../../assets/signin.png";
-import murderMystery from "../../assets/murder_mystery.png";
-import stellaBella from "../../assets/stella_bella.png";
-// import theatre from "../../assets/theatre.gif";
 import dummy2 from "../../assets/dummy2.jpeg";
 import dummy3 from "../../assets/dummy3.jpeg";
 import mute from "../../assets/mute.png";
 import volume from "../../assets/volume.png";
 import music from "../../assets/toonlandmusic.mpeg";
+
 import illustratedStories from "../../assets/illustrated-stories.png";
 import audioStories from "../../assets/audio-stories.png";
+import murderMystery from "../../assets/murder_mystery.png";
+import stellaBella from "../../assets/stella_bella.png";
+
 import logo from "../../assets/logo.png";
-import bgNew from "../../assets/bg-new.jpg";
+import menu from "../../assets/menu.png";
 import happyChildhood from "../../assets/happy-childhood.png";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/apiCalls";
 
-export default function Home() {
+export default function Home2() {
   const [date, setDate] = useState(new Date());
 
   function refreshClock() {
@@ -83,12 +85,12 @@ export default function Home() {
   // console.log(playing);
 
   return (
-    <React.Fragment>
-      <div>
+    <>
+      {/*<div>
         <button onClick={handleLogout} className={Styles.login_button}>
           <Link to="/login">{currentUser ? "Signout" : "SignIn"}</Link>
         </button>
-      </div>
+        </div>*/}
       <div>
         <audio ref={audioRef} loop>
           <source src={music} type="audio/mpeg" />
@@ -112,52 +114,47 @@ export default function Home() {
         />
       </div>
       <div className={Styles.homepage}>
-        <div className={Styles.pg1}>
-          <img className={Styles.pg1_bg} src={bg1} alt="" />
-          <img className={Styles.logo} src={logo} alt="" />
-          <div className={Styles.contact}>
-            <img className={Styles.dialogueBox} src={dialogueBox} alt="" />
-            <div>
-              contact <span className={Styles.con}>9036033300</span> , for live
-              interaction session mon-fri (12pm - 2pm)
+        <div className={Styles.pg2}>
+          <img className={Styles.pg2_bg} src={bg2} alt="" />
+          <div>
+            {/*<img className={Styles.nala} src={nala} alt="" />*/}
+            <div className={Styles.meme}>
+              <img src={meme} alt="" />
+              <ul>
+                <li className={Styles.quotes}>“</li>
+                <li>
+                  <p>
+                    Let us remember: One book, one pen, one child and one
+                    teacher can change the world.
+                  </p>
+                </li>
+                <li className={Styles.quotes}>”</li>
+              </ul>
             </div>
           </div>
-          <span className={Styles.time}>
-            {date.toString().split("2022", 1)}
-          </span>{" "}
-          <br />
-          <span className={Styles.time} style={{ bottom: "12%" }}>
-            {date.toString().split(" ", 16)[4]}
-          </span>
-        </div>
-
-        <div className={Styles.pg2}>
-          <img className={Styles.nala} src={nala} alt="" />
-          <div className={Styles.meme}>
-            <img src={meme} alt="" />
-            <span>
-              “Let us remember: One book, one pen, one child and one teacher can
-              change the world.”
-            </span>
+          <div className={Styles.listy}>
+            <div className={Styles.description}>
+              <img src={audioStories} alt="" />
+              <span>Audio stories</span>
+            </div>
+            <div className={Styles.description}>
+              <img src={illustratedStories} alt="" />
+              <span>Illustrated stories</span>
+            </div>
+            <div className={Styles.description}>
+              <img src={stellaBella} alt="" />
+              <span>Comics</span>
+            </div>
+            <div className={Styles.description}>
+              <img src={murderMystery} alt="" />
+              <span>knowledge Cards</span>
+            </div>
           </div>
-          <div className={Styles.about}>
-            <span className={Styles.ooo}>
-              <img className={Styles.toto} src={toto} alt="" />
-              <h5>
-                Toonland is presented by Mentoons A fun entartaining and
-                learning Platform designed especially for kids between 6-12
-                years. we create free and low-cost experiences whereby kids can
-                learn through Toonland website. kids have fun while reading and
-                watching ours illustrated audio and video stories.
-              </h5>
-            </span>
-          </div>
-          <img className={Styles.pg2_bg} src={bg2} alt="" />
         </div>
 
         <div className={Styles.pg3}>
           <img className={Styles.pg3_bg} src={bg3} alt="" />
-          <div
+          {/*<div
             style={{
               position: "absolute",
               top: 0,
@@ -175,41 +172,41 @@ export default function Home() {
               intelligence Theory, which will help oun Reels learn about
               friendships a love, emotions, peace, and harmony. also downlood
               stickers and posters for free from the website
-            </h5>
-            <div className={Styles.list}>
+                </h5>
+             <div className={Styles.list}>
               <img src={audioStories} alt="" />
               <img src={illustratedStories} alt="" />
               <img src={murderMystery} alt="" />
               <img src={stellaBella} alt="" />
             </div>
-          </div>
+          </div>*/}
         </div>
 
         <div className={Styles.pg4}>
           <img className={Styles.pg4_bg} src={bg4} alt="" />
-          <img className={Styles.meerkat} src={meerkat} alt="" />
+          <img className={Styles.fifi} src={fifi} alt="" />
+          {/*<img className={Styles.meerkat} src={meerkat} alt="" />*/}
         </div>
         <div className={Styles.pg5}>
           <img className={Styles.pg5_bg} src={bg5} alt="" />
-          <img className={Styles.fifi} src={fifi} alt="" />
           <img className={Styles.tubbykuma} src={tubbykuma} alt="" />
-          <span className={Styles.dummy_text}>
+          {/*<span className={Styles.dummy_text}>
             Click here for fun and exciting videos.
-          </span>
+        </span>*/}
 
-          <span className={Styles.library_text}>
+          {/*<span className={Styles.library_text}>
             Develop your knowledge with our Recommended readings, DIY courses,
             Journals and knowledge cards.
-          </span>
+        </span>*/}
         </div>
 
         <div className={Styles.pg6}>
           <Link to="/explore/mall">
             <img className={Styles.pg6_bg} src={bg6} alt="" />
           </Link>
-          <span className={Styles.video_text}>
+          {/*<span className={Styles.video_text}>
             Click here for exciting and fun videos.
-          </span>
+        </span>*/}
           <div className={Styles.dummy}>
             <iframe
               src="https://www.youtube.com/embed/t0Q2otsqC4I"
@@ -225,21 +222,19 @@ export default function Home() {
               title="YouTube video player"
             ></iframe>
           </div>
-          <img className={Styles.contest} src={contest} alt="" />
+          {/* <img className={Styles.contest} src={contest} alt="" />
           <div className={Styles.pinkcard}>
             <input type="email" placeholder="Email" />
             <input type="text" placeholder="Name" />
             <input type="file" placeholder="Select your File" />
             <button>Submit</button>
-          </div>
-          <img className={Styles.contest2} src={contest2} alt="" />
+        </div>*/}
+          {/*<img className={Styles.contest2} src={contest2} alt="" />*/}
         </div>
       </div>
-      
-    </React.Fragment>
+    </>
   );
 }
-
 // <img className={Styles.happy_childhood} src={happyChildhood} alt="" />
 // <div className={Styles.illustrated_stories}>
 //             <img src={illustratedStories} alt="" />
@@ -276,3 +271,28 @@ export default function Home() {
 //           >
 //             Toonland Theater, watch exciting and fun videos
 //           </span>
+
+// <div className={Styles.iframe}>
+//   <iframe
+//     className={`Styles.ytp-title-text`}
+//     src="https://www.youtube.com/embed/t0Q2otsqC4I"
+//     title="YouTube video player"
+//     allow="accelerometer;"
+//   ></iframe>
+//   <iframe
+//     src="https://www.youtube.com/embed/K93u6cHVwf8"
+//     title="YouTube video player"
+//   ></iframe>
+//   <iframe
+//     src="https://www.youtube.com/embed/vGHz6sJMKsI"
+//     title="YouTube video player"
+//   ></iframe>
+// </div>;
+
+// <div className={Styles.header}>
+//   <div className={Styles.header_menu}>
+//     <img src={menu} alt="" />
+//     <img src={logo} className={Styles.logo} alt="" />
+//     <button>Signup</button>
+//   </div>
+// </div>;

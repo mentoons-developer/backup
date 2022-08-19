@@ -5,7 +5,7 @@ import food from "../../assets/video.png";
 import park from "../../assets/library.png";
 import contest from "../../assets/trophy.png";
 import profile from "../../assets/girl.png";
-import blog from "../../assets/blog.png";
+import workshop from "../../assets/workshop.png";
 import comic from "../../assets/comic.png";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
@@ -45,9 +45,9 @@ function Navbar() {
             </Link>
           </li>
           <li>
-            <Link to="/">
-              <p> blogs</p>
-              <img src={blog} alt="blogs" />
+            <Link to="/explore/workshop">
+              <p> workshop</p>
+              <img src={workshop} alt="workshop" />
             </Link>
           </li>
           <li>
